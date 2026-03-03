@@ -1,0 +1,242 @@
+global !p
+def math():
+    return vim.eval('vimtex#syntax#in_mathzone()') == '1'
+
+endglobal
+
+# Vocali accentate
+
+snippet a` "accento" iA
+à
+endsnippet
+
+snippet e` "accento" iA
+è
+endsnippet
+
+snippet E` "accento" iA
+È
+endsnippet
+
+snippet u` "accento" iA
+ù
+endsnippet
+
+snippet e' "accento" iA
+é
+endsnippet
+
+snippet o` "accento" iA
+ò
+endsnippet
+
+# General snippets
+
+snippet doc "document"
+\documentclass[a4]{article}
+\begin{document}
+$0
+\end{document}
+endsnippet
+
+snippet fig "figure"
+\\begin{figure}[H]
+    \\centering
+    \\includegraphics[width = \\linewidth]{$1}
+    \\caption{$2}
+\\end{figure}
+$0
+endsnippet
+
+snippet beg "begin"  
+\begin{$1}
+$2
+\end{$1}
+$0
+endsnippet
+
+snippet tbb "boldface" iA
+\textbf{${1:${VISUAL:}}}$0
+endsnippet
+
+snippet tii "italics" iA
+\textit{${1:${VISUAL:}}}$0
+endsnippet
+
+#Math
+
+snippet bm "big math" i
+\$\$ $1 \$\$ 
+$0
+endsnippet
+
+snippet mm "inline math" i
+\$ $1 \$ $0
+endsnippet
+
+context "math()"
+snippet int "integral" iA
+\int_{$1}^{$2}$0
+endsnippet
+
+context "math()"
+snippet / "Fraction" iA
+\\frac{$1}{$2}$0
+endsnippet
+
+snippet \S "Sigma (summation)" iA
+\sum_{$1}^{$2}$0
+endsnippet
+
+context "math()"
+snippet inf "infinity" i
+\infty
+endsnippet
+
+# Greek letters (math mode only)
+
+context "math()"
+snippet \a "alpha" iA
+\alpha
+endsnippet
+
+context "math()"
+snippet \b "beta" iA
+\beta
+endsnippet
+
+context "math()"
+snippet \g "gamma" iA
+\gamma
+endsnippet
+
+context "math()"
+snippet \G "Gamma" iA
+\Gamma
+endsnippet
+
+context "math()"
+snippet \d "delta" iA
+\delta
+endsnippet
+
+context "math()"
+snippet \D "Delta" iA
+\Delta
+endsnippet
+
+context "math()"
+snippet \e "epsilon" iA
+\epsilon
+endsnippet
+
+context "math()"
+snippet \h "eta" iA
+\eta
+endsnippet
+
+context "math()"
+snippet \th "theta" iA
+\theta
+endsnippet
+
+context "math()"
+snippet \Th "Theta" iA
+\Theta
+endsnippet
+
+context "math()"
+snippet \l "lambda" iA
+\lambda
+endsnippet
+
+context "math()"
+snippet \L "Lambda" iA
+\Lambda
+endsnippet
+
+context "math()"
+snippet \m "mu" iA
+\mu
+endsnippet
+
+context "math()"
+snippet \n "nu" iA
+\nu
+endsnippet
+
+context "math()"
+snippet \x "xi" iA
+\xi
+endsnippet
+context "math()"
+snippet \X "Xi" iA
+\Xi
+endsnippet
+
+context "math()"
+snippet \x "xi" iA
+\xi
+endsnippet
+
+#Conflicts with psi!
+#context "math()"
+#snippet \p "pi" iA
+#\pi
+#endsnippet
+
+#context "math()"
+#snippet \P "Pi" iA
+#\Pi
+#endsnippet
+
+context "math()"
+snippet \r "rho" iA
+\rho
+endsnippet
+
+context "math()"
+snippet \s "sigma" iA
+\sigma
+endsnippet
+context "math()"
+
+context "math()"
+snippet \t "tau" iA
+\tau
+endsnippet
+
+context "math()"
+snippet \f "phi" iA
+\phi
+endsnippet
+
+context "math()"
+snippet \F "Phi" iA
+\Phi
+endsnippet
+
+context "math()"
+snippet \c "chi" iA
+\chi
+endsnippet
+
+context "math()"
+snippet \ps "psi" iA
+\psi
+endsnippet
+
+context "math()"
+snippet \Ps "Psi" iA
+\Psi
+endsnippet
+
+context "math()"
+snippet \o "omega" iA
+\omega
+endsnippet
+
+context "math()"
+snippet \O "Omega" iA
+\Omega
+endsnippet
