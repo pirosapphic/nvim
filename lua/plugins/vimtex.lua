@@ -1,3 +1,6 @@
+vim.g.vimtex_compiler_latexmk = {
+    aux_dir = "aux", -- create a directory called aux that will contain all the auxiliary files
+}
 return
 {
   "lervag/vimtex",
