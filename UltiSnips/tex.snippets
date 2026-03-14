@@ -6,14 +6,14 @@ endglobal
 
 # General snippets
 
-snippet doc "document"
+snippet ;doc "document" iA
 \documentclass[a4]{article}
 \begin{document}
 $0
 \end{document}
 endsnippet
 
-snippet fig "figure"
+snippet ;fig "figure" iA
 \\begin{figure}[H]
     \\centering
     \\includegraphics[width = \\linewidth]{$1}
@@ -22,14 +22,14 @@ snippet fig "figure"
 $0
 endsnippet
 
-snippet beg "begin"  
+snippet ;beg "begin" iA
 \begin{$1}
 $2
 \end{$1}
 $0
 endsnippet
 
-snippet box "makes simple box"
+snippet ;box "makes simple box" iA
 \noindent\fbox{%
     \parbox{\textwidth}{%
 	$1
@@ -48,11 +48,11 @@ endsnippet
 
 #Math
 
-snippet bm "big math visual" i
+snippet ;bm "big math visual" iA
 \$\$${1:${VISUAL:}}\$\$$0
 endsnippet
 
-snippet mm "inline math visual" i
+snippet ;mm "inline math visual" iA
 \$${1:${VISUAL:}}\$$0
 endsnippet
 
