@@ -1,9 +1,9 @@
-vim.g.vimtex_compiler_latexmk = {
-    aux_dir = "aux", -- create a directory called aux that will contain all the auxiliary files
-}
+--vim.g.vimtex_compiler_latexmk = {
+  --  aux_dir = "aux", -- create a directory called aux that will contain all the auxiliary files
+--}
 vim.g.vimtex_quickfix_method = 'pplatex'
 vim.g.vimtex_quickfix_open_on_warning = 0
-vim.g.vimtex_quickfix_autoclose_after_keystrokes = 3
+vim.g.vimtex_quickfix_autoclose_after_keystrokes = 1
 
 return
 {
