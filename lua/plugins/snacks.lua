@@ -7,6 +7,7 @@ return {
   lazy = false,
   opts = {
     bigfile = { enabled = true },
+    image = { enabled = true },
     dashboard = {
       enabled = true,
       preset = {
@@ -25,13 +26,20 @@ return {
     indent = { enabled = true },
     input = { enabled = true },
     git = { enabled = true },
-    picker = { enabled = true },
+    lazygit = { enabled = false },
+    --picker = { enabled = true },
     notifier = { enabled = true },
     quickfile = { enabled = true },
-    scroll = { enabled = false },
+    scroll = { enabled = false,
+	animate = {
+	    duration = { step = 10, total = 200 },
+	    easing = "linear",
+	    }
+	},
     statuscolumn = { enabled = true },
     words = { enabled = true },
   },
+--[[
   keys = {
     { "<leader>sf",       function() Snacks.scratch() end,            desc = "Toggle Scratch Buffer" },
     { "<leader>S",        function() Snacks.scratch.select() end,     desc = "Select Scratch Buffer" },
@@ -42,6 +50,6 @@ return {
     { "<leader>fb",       function() Snacks.picker.buffers() end,     desc = "Buffers" },
     { "<leader>fg",       function() Snacks.picker.grep() end,        desc = "Grep Files" },
     { "<C-n>",            function() Snacks.explorer() end,           desc = "Explorer" },
-  }
+  } --]]
 }
 
