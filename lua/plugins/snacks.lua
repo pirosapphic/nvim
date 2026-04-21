@@ -7,7 +7,13 @@ return {
   lazy = false,
   opts = {
     bigfile = { enabled = true },
-    image = { enabled = true },
+    image = { 
+	enabled = true,
+	doc = {
+	    inline=false,
+	    float = false
+	    }
+	},
     dashboard = {
       enabled = true,
       preset = {
