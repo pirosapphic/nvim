@@ -39,11 +39,19 @@ $0
 endsnippet
 
 snippet ;tbb "boldface" iA
-\textbf{${1:${VISUAL:}}}$0
+\\textbf{${1:${VISUAL:}}}$0
 endsnippet
 
 snippet ;tii "italics" iA
-\textit{${1:${VISUAL:}}}$0
+\\textit{${1:${VISUAL:}}}$0
+endsnippet
+
+snippet ;rf "reference" iA
+\\ref{$1}$0
+endsnippet
+
+snippet ;lb "label" iA
+\\label{$1}$0
 endsnippet
 
 #Math
@@ -54,6 +62,11 @@ endsnippet
 
 snippet ;mm "inline math visual" iA
 \$${1:${VISUAL:}}\$$0
+endsnippet
+
+context "math()"
+snippet ;mb "mathbf" iA
+\\mathbf{$1}$0
 endsnippet
 
 context "math()"
@@ -89,6 +102,31 @@ endsnippet
 context "math()"
 snippet ;/ "Fraction" iA
 \\frac{$1}{$2}$0
+endsnippet
+
+context "math()"
+snippet ;sq "Square root" iA
+\\sqrt{$1}$0
+endsnippet
+
+context "math()"
+snippet ;lp "Laplacian" iA
+\\laplacian$0
+endsnippet
+
+context "math()"
+snippet ;gr "gradient" iA
+\\gradient$0
+endsnippet
+
+context "math()"
+snippet ;di "divergence" iA
+\\divergence$0
+endsnippet
+
+context "math()"
+snippet ;cu "curl" iA
+\\curl$0
 endsnippet
 
 context "math()"
@@ -190,7 +228,7 @@ snippet ;D "Delta" iA
 endsnippet
 
 snippet ;ee "epsilon" iA
-\epsilon
+\varepsilon
 endsnippet
 
 context "math()"
@@ -200,7 +238,7 @@ endsnippet
 
 context "math()"
 snippet ;th "theta" iA
-\theta
+\vartheta
 endsnippet
 
 context "math()"
@@ -219,12 +257,12 @@ snippet ;L "Lambda" iA
 endsnippet
 
 context "math()"
-snippet ;r "rho" iA
+snippet ;rr "rho" iA
 \rho
 endsnippet
 
 context "math()"
-snippet ;s "sigma" iA
+snippet ;ss "sigma" iA
 \sigma
 endsnippet
 
@@ -244,7 +282,7 @@ snippet ;F "Phi" iA
 endsnippet
 
 context "math()"
-snippet ;c "chi" iA
+snippet ;ch "chi" iA
 \chi
 endsnippet
 
