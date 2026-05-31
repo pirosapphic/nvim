@@ -24,7 +24,7 @@ endsnippet
 
 snippet ;beg "begin" iA
 \begin{$1}
-$2
+${2:${VISUAL:}}
 \end{$1}
 $0
 endsnippet
@@ -65,8 +65,13 @@ snippet ;mm "inline math visual" iA
 endsnippet
 
 context "math()"
+snippet ;bx "box" iA
+\\boxed{${1:${VISUAL:}}}$0
+endsnippet
+
+context "math()"
 snippet ;mb "mathbf" iA
-\\mathbf{$1}$0
+\\mathbf{${1:${VISUAL:}}}$0
 endsnippet
 
 context "math()"
@@ -90,6 +95,11 @@ snippet ;iff "leftrightarrow" iA
 endsnippet
 
 context "math()"
+snippet ;. "dot product" iA
+\\cdot
+endsnippet
+
+context "math()"
 snippet ;int "integral" iA
 \\int_{$1}^{$2}$0
 endsnippet
@@ -106,7 +116,7 @@ endsnippet
 
 context "math()"
 snippet ;sq "Square root" iA
-\\sqrt{$1}$0
+\\sqrt{${1:${VISUAL:}}}$0
 endsnippet
 
 context "math()"
@@ -136,37 +146,42 @@ endsnippet
 
 context "math()"
 snippet ;( "round bracket" iA
-\\left($1\\right)$0
+\\left(${1:${VISUAL:}}\\right)$0
 endsnippet
 
 context "math()"
 snippet ;[ "square bracket" iA
-\\left[$1\\right]$0
+\\left[${1:${VISUAL:}}\\right]$0
 endsnippet
 
 context "math()"
 snippet ;{ "curly bracket" iA
-\\left\\\{$1\\right\\\}$0
+\\left\\\{${1:${VISUAL:}}\\right\\\}$0
 endsnippet
 
 context "math()"
 snippet ;| "abs value" iA
-\\left|$1\\right|$0
+\\left|${1:${VISUAL:}}\\right|$0
 endsnippet
 
 context "math()"
-snippet ;< "mean value" iA
-\\langle$1\\rangle$0
+snippet ;<< "mean value" iA
+\\langle${1:${VISUAL:}}\\rangle$0
+endsnippet
+
+context "math()"
+snippet ;tx "text" iA
+\\text\{${1:${VISUAL:}}\}$0
 endsnippet
 
 context "math()"
 snippet ;kk "ket" iA
-\\ket{$1}$0
+\\ket\{$1\}$0
 endsnippet
 
 context "math()"
 snippet ;S "Sigma (summation)" iA
-\\sum_{$1}^{$2}$0
+\\sum_\{$1\}^\{$2\}$0
 endsnippet
 
 context "math()"
@@ -203,7 +218,7 @@ snippet ;aa "alpha" iA
 endsnippet
 
 context "math()"
-snippet ;be "beta" iA
+snippet ;bt "beta" iA
 \beta
 endsnippet
 
