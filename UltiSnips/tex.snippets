@@ -30,28 +30,28 @@ $0
 endsnippet
 
 snippet ;box "makes simple box" iA
-\noindent\fbox{%
-    \parbox{\textwidth}{%
+\\noindent\\fbox\{%
+    \\parbox\{\\textwidth\}\{%
 	$1
-    }%
-}
+    \}%
+\}
 $0
 endsnippet
 
 snippet ;tbb "boldface" iA
-\\textbf{${1:${VISUAL:}}}$0
+\\textbf\{${1:${VISUAL:}}\}$0
 endsnippet
 
 snippet ;tii "italics" iA
-\\textit{${1:${VISUAL:}}}$0
+\\textit\{${1:${VISUAL:}}\}$0
 endsnippet
 
 snippet ;rf "reference" iA
-\\ref{$1}$0
+\\ref\{$1\}$0
 endsnippet
 
 snippet ;lb "label" iA
-\\label{$1}$0
+\\label\{$1\}$0
 endsnippet
 
 #Math
@@ -66,12 +66,12 @@ endsnippet
 
 context "math()"
 snippet ;bx "box" iA
-\\boxed{${1:${VISUAL:}}}$0
+\\boxed\{${1:${VISUAL:}}\}$0
 endsnippet
 
 context "math()"
 snippet ;mb "mathbf" iA
-\\mathbf{${1:${VISUAL:}}}$0
+\\mathbf\{${1:${VISUAL:}}\}$0
 endsnippet
 
 context "math()"
@@ -101,22 +101,22 @@ endsnippet
 
 context "math()"
 snippet ;int "integral" iA
-\\int_{$1}^{$2}$0
+\\int_\{$1\}^\{$2\}$0
 endsnippet
 
 context "math()"
 snippet ;li "limit" iA
-\\lim\\limits_{$1\\to$2}$0
+\\lim\\limits_\{$1\\to$2\}$0
 endsnippet
 
 context "math()"
 snippet ;/ "Fraction" iA
-\\frac{$1}{$2}$0
+\\frac\{$1\}\{$2\}$0
 endsnippet
 
 context "math()"
 snippet ;sq "Square root" iA
-\\sqrt{${1:${VISUAL:}}}$0
+\\sqrt\{${1:${VISUAL:}}\}$0
 endsnippet
 
 context "math()"
@@ -137,11 +137,6 @@ endsnippet
 context "math()"
 snippet ;cu "curl" iA
 \\curl$0
-endsnippet
-
-context "math()"
-snippet ;bb "bra" iA
-\\bra{$1}$0
 endsnippet
 
 context "math()"
@@ -175,6 +170,12 @@ snippet ;tx "text" iA
 endsnippet
 
 context "math()"
+snippet ;bb "bra" iA
+\\bra\{$1\}$0
+endsnippet
+
+
+context "math()"
 snippet ;kk "ket" iA
 \\ket\{$1\}$0
 endsnippet
@@ -186,7 +187,7 @@ endsnippet
 
 context "math()"
 snippet ;P "Pi (product)" iA
-\\prod_{$1}^{$2}$0
+\\prod_\{$1\}^\{$2\}$0
 endsnippet
 
 context "math()"
@@ -202,121 +203,121 @@ endsnippet
 #first argument is order, then variable then function
 context "math()"
 snippet ;dv "derivative" iA 
-\\dv[$1]{$2}{$3}$0
+\\dv[$1]\{$2\}\{$3\}$0
 endsnippet
 
 context "math()"
 snippet ;pdv "partial derivative" iA 
-\\pdv[$1]{$2}{$3}$0
+\\pdv[$1]\{$2\}\{$3\}$0
 endsnippet
 
 # Greek letters (math mode only)
 
 context "math()"
 snippet ;aa "alpha" iA
-\alpha
+\\alpha
 endsnippet
 
 context "math()"
 snippet ;bt "beta" iA
-\beta
+\\beta
 endsnippet
 
 context "math()"
 snippet ;gg "gamma" iA
-\gamma
+\\gamma
 endsnippet
 
 context "math()"
 snippet ;G "Gamma" iA
-\Gamma
+\\Gamma
 endsnippet
 
 context "math()"
 snippet ;dd "delta" iA
-\delta
+\\delta
 endsnippet
 
 context "math()"
 snippet ;D "Delta" iA
-\Delta
+\\Delta
 endsnippet
 
 snippet ;ee "epsilon" iA
-\varepsilon
+\\varepsilon
 endsnippet
 
 context "math()"
 snippet ;hh "eta" iA
-\eta
+\\eta
 endsnippet
 
 context "math()"
 snippet ;th "theta" iA
-\vartheta
+\\vartheta
 endsnippet
 
 context "math()"
 snippet ;Th "Theta" iA
-\Theta
+\\Theta
 endsnippet
 
 context "math()"
 snippet ;ll "lambda" iA
-\lambda
+\\lambda
 endsnippet
 
 context "math()"
 snippet ;L "Lambda" iA
-\Lambda
+\\Lambda
 endsnippet
 
 context "math()"
 snippet ;rr "rho" iA
-\rho
+\\rho
 endsnippet
 
 context "math()"
 snippet ;ss "sigma" iA
-\sigma
+\\sigma
 endsnippet
 
 context "math()"
 snippet ;tt "tau" iA
-\tau
+\\tau
 endsnippet
 
 context "math()"
 snippet ;ff "phi" iA
-\varphi
+\\varphi
 endsnippet
 
 context "math()"
 snippet ;F "Phi" iA
-\Phi
+\\Phi
 endsnippet
 
 context "math()"
 snippet ;ch "chi" iA
-\chi
+\\chi
 endsnippet
 
 context "math()"
 snippet ;ps "psi" iA
-\psi
+\\psi
 endsnippet
 
 context "math()"
 snippet ;Ps "Psi" iA
-\Psi
+\\Psi
 endsnippet
 
 context "math()"
 snippet ;oo "omega" iA
-\omega
+\\omega
 endsnippet
 
 context "math()"
 snippet ;O "Omega" iA
-\Omega
+\\Omega
 endsnippet
