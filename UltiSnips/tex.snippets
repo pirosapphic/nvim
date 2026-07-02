@@ -75,6 +75,11 @@ snippet ;mb "mathbf" iA
 endsnippet
 
 context "math()"
+snippet ;mc "mathcal" iA
+\\mathcal\{${1:${VISUAL:}}\}$0
+endsnippet
+
+context "math()"
 snippet ;>= "geq" iA
 \\geq
 endsnippet
@@ -82,6 +87,16 @@ endsnippet
 context "math()"
 snippet ;<= "leq" iA
 \\leq
+endsnippet
+
+context "math()"
+snippet ;_ "pedix" iA
+_\{${1:${VISUAL:}}\}$0
+endsnippet
+
+context "math()"
+snippet ;^ "apex" iA
+^\{${1:${VISUAL:}}\}$0
 endsnippet
 
 context "math()"
