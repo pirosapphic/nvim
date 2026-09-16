@@ -54,6 +54,10 @@ snippet ;lb "label" iA
 \\label\{$1\}$0
 endsnippet
 
+snippet ;ft "footnote" iA
+\\footnote\{${1:${VISUAL:}}\}$0
+endsnippet
+
 #Math
 
 snippet ;bm "big math visual" iA
@@ -100,6 +104,11 @@ snippet ;^ "apex" iA
 endsnippet
 
 context "math()"
+snippet ;dg "dagger" iA
+^\\dagger$0
+endsnippet
+
+context "math()"
 snippet ;-> "rightarrow" iA
 \\rightarrow
 endsnippet
@@ -132,6 +141,16 @@ endsnippet
 context "math()"
 snippet ;sq "Square root" iA
 \\sqrt\{${1:${VISUAL:}}\}$0
+endsnippet
+
+context "math()"
+snippet ;sin "Sin" iA
+\\sin\\left(${1:${VISUAL:}}\\right)$0
+endsnippet
+
+context "math()"
+snippet ;cos "Cos" iA
+\\cos\\left(${1:${VISUAL:}}\\right)$0
 endsnippet
 
 context "math()"
