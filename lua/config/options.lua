@@ -3,3 +3,4 @@ vim.opt.cursorline = true
 vim.opt.relativenumber = true
 vim.opt.shiftwidth = 4
 vim.opt.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+vim.opt.scrolloff = 15

@@ -1,5 +1,5 @@
 require('config.options')
 require('config.keybinds')
 require('config.lazy')
-
+require('scrollEOF').setup()
 --vim.cmd("syntax on")
