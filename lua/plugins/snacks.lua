@@ -57,5 +57,8 @@ return {
     { "<leader>fg",       function() Snacks.picker.grep() end,        desc = "Grep Files" },
     { "<C-n>",            function() Snacks.explorer() end,           desc = "Explorer" },
   } --]]
+    keys = {
+    { "<leader>db",	function() Snacks.dashboard() end, 	desc = "Open Dashboard"}
+    },
 }
-
+    

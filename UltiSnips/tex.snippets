@@ -104,6 +104,11 @@ snippet ;^ "apex" iA
 endsnippet
 
 context "math()"
+snippet ;ind "einstein indexes" iA
+\\indices\{${1:${VISUAL:}}\}$0
+endsnippet
+
+context "math()"
 snippet ;dg "dagger" iA
 ^\\dagger$0
 endsnippet
@@ -154,8 +159,18 @@ snippet ;cos "Cos" iA
 endsnippet
 
 context "math()"
+snippet ;exp "Exp" iA
+\\exp\\left[${1:${VISUAL:}}\\right]$0
+endsnippet
+
+context "math()"
 snippet ;lp "Laplacian" iA
 \\laplacian$0
+endsnippet
+
+context "math()"
+snippet ;dal "D'Alembertian" iA
+\\Box$0
 endsnippet
 
 context "math()"
