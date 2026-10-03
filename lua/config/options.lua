@@ -1,8 +1,11 @@
 vim.opt.number = true
 vim.opt.cursorline = true
 vim.opt.relativenumber = true
+vim.opt.expandtab = true
+vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
-vim.opt.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+--vim.opt.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+vim.opt.autoindent = true
 vim.opt.scrolloff = 50
 vim.opt.spelllang = 'en_gb'
 vim.opt.spell = true
