@@ -29,10 +29,25 @@ ${2:${VISUAL:}}
 $0
 endsnippet
 
+snippet ;sec "section" iA
+\\section\{${1:${VISUAL:}}\}
+$0
+endsnippet
+
+snippet ;ssec "subsection" iA
+\\subsection\{${1:${VISUAL:}}\}
+$0
+endsnippet
+
+snippet ;sssec "subsubsection" iA
+\\subsubsection\{${1:${VISUAL:}}\}
+$0
+endsnippet
+
 snippet ;box "makes simple box" iA
 \\noindent\\fbox\{%
     \\parbox\{\\textwidth\}\{%
-	$1
+	${1:${VISUAL:}}
     \}%
 \}
 $0
@@ -337,8 +352,13 @@ snippet ;tt "tau" iA
 endsnippet
 
 context "math()"
-snippet ;ff "phi" iA
+snippet ;vf "varphi" iA
 \\varphi
+endsnippet
+
+context "math()"
+snippet ;ff "phi" iA
+\\phi
 endsnippet
 
 context "math()"
