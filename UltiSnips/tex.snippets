@@ -89,8 +89,13 @@ snippet ;bx "box" iA
 endsnippet
 
 context "math()"
-snippet ;mb "mathbf" iA
+snippet ;mbf "mathbf" iA
 \\mathbf\{${1:${VISUAL:}}\}$0
+endsnippet
+
+context "math()"
+snippet ;mbb "mathbb" iA
+\\mathbb\{${1:${VISUAL:}}\}$0
 endsnippet
 
 context "math()"
@@ -156,6 +161,11 @@ endsnippet
 context "math()"
 snippet ;/ "Fraction" iA
 \\frac\{$1\}\{$2\}$0
+endsnippet
+
+context "math()"
+snippet ;f/ "Flat fraction" iA
+\\flatfrac\{$1\}\{$2\}$0
 endsnippet
 
 context "math()"
