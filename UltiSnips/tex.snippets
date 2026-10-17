@@ -135,12 +135,23 @@ endsnippet
 
 context "math()"
 snippet ;-> "rightarrow" iA
-\\rightarrow
+\\longrightarrow
 endsnippet
 
 context "math()"
-snippet ;iff "leftrightarrow" iA
-\\leftrightarrow
+snippet ;<-> "leftrightarrow" iA
+\\longleftrightarrow
+endsnippet
+
+
+context "math()"
+snippet ;=> "implication" iA
+\\implies
+endsnippet
+
+context "math()"
+snippet ;iff "if and only if" iA
+\\iff
 endsnippet
 
 context "math()"
@@ -150,7 +161,7 @@ endsnippet
 
 context "math()"
 snippet ;int "integral" iA
-\\int_\{$1\}^\{$2\}$0
+\\int \\dd $0
 endsnippet
 
 context "math()"
