@@ -5,10 +5,10 @@ def math():
 endglobal
 
 # General snippets
-
+priority 0
 snippet ;doc "document" iA
-\\documentclass[a4]{article}
-\\begin\{document}
+\\documentclass[a4]\{book\}
+\\begin\{document\}
 $0
 \end{document}
 endsnippet
@@ -73,14 +73,29 @@ snippet ;ft "footnote" iA
 \\footnote\{${1:${VISUAL:}}\}$0
 endsnippet
 
+snippet ;-- "line" iA
+%------------------------------------------------------------------------------
+$0
+endsnippet
+
+#------------------------------------------------------------------------------
 #Math
 
+snippet ;bbm "very big math visual" iA
+\\begin\{${1:gather*}\}
+	${2:${VISUAL:}}
+\\end\{$1\}
+$0
+endsnippet
+
 snippet ;bm "big math visual" iA
-\$\$${1:${VISUAL:}}\$\$$0
+\\[
+	${1:${VISUAL:}}
+\\]$0
 endsnippet
 
 snippet ;mm "inline math visual" iA
-\$${1:${VISUAL:}}\$$0
+\$${1:${VISUAL:}}\$ $0
 endsnippet
 
 context "math()"
@@ -105,12 +120,12 @@ endsnippet
 
 context "math()"
 snippet ;>= "geq" iA
-\\geq
+\\geq $0
 endsnippet
 
 context "math()"
 snippet ;<= "leq" iA
-\\leq
+\\leq $0
 endsnippet
 
 context "math()"
@@ -130,53 +145,58 @@ endsnippet
 
 context "math()"
 snippet ;dg "dagger" iA
-^\\dagger$0
+^\\dagger $0
 endsnippet
 
 context "math()"
 snippet ;-> "rightarrow" iA
-\\longrightarrow
+\\longrightarrow $0
 endsnippet
 
 context "math()"
 snippet ;<-> "leftrightarrow" iA
-\\longleftrightarrow
+\\longleftrightarrow $0
 endsnippet
 
 
 context "math()"
 snippet ;=> "implication" iA
-\\implies
+\\implies $0
 endsnippet
 
 context "math()"
 snippet ;iff "if and only if" iA
-\\iff
+\\iff $0
 endsnippet
 
 context "math()"
 snippet ;. "dot product" iA
-\\cdot
+\\cdot $0
 endsnippet
 
 context "math()"
 snippet ;int "integral" iA
-\\int \\dd $0
+\\int_\{$1\}^\{$2\} \\dd ${0:${VISUAL:}}
+endsnippet
+
+context "math()"
+snippet ;fin "Feynman path integral" iA
+\\int \\mathcal\{D\}${1:\\phi} ${0:${VISUAL:}}
 endsnippet
 
 context "math()"
 snippet ;li "limit" iA
-\\lim\\limits_\{$1\\to$2\}$0
+\\lim\\limits_\{$1\\to$2\}${0:${VISUAL:}}
 endsnippet
 
 context "math()"
 snippet ;/ "Fraction" iA
-\\frac\{$1\}\{$2\}$0
+\\frac\{${1:${VISUAL:}}\}\{$2\}$0
 endsnippet
 
 context "math()"
 snippet ;f/ "Flat fraction" iA
-\\flatfrac\{$1\}\{$2\}$0
+\\flatfrac\{${1:${VISUAL:}}\}\{$2\}$0
 endsnippet
 
 context "math()"
@@ -196,32 +216,32 @@ endsnippet
 
 context "math()"
 snippet ;exp "Exp" iA
-\\exp\\left[${1:${VISUAL:}}\\right]$0
+\\exp\\left[ ${1:${VISUAL:}} \\right]$0
 endsnippet
 
 context "math()"
 snippet ;lp "Laplacian" iA
-\\laplacian$0
+\\laplacian $0
 endsnippet
 
 context "math()"
 snippet ;dal "D'Alembertian" iA
-\\Box$0
+\\Box $0
 endsnippet
 
 context "math()"
 snippet ;gr "gradient" iA
-\\gradient$0
+\\gradient $0
 endsnippet
 
 context "math()"
 snippet ;di "divergence" iA
-\\divergence$0
+\\divergence $0
 endsnippet
 
 context "math()"
 snippet ;cu "curl" iA
-\\curl$0
+\\curl $0
 endsnippet
 
 context "math()"
@@ -246,7 +266,12 @@ endsnippet
 
 context "math()"
 snippet ;<< "mean value" iA
-\\langle${1:${VISUAL:}}\\rangle$0
+\\langle ${1:${VISUAL:}}\\rangle $0
+endsnippet
+
+context "math()"
+snippet ;ev "evaluation" iA
+\\eval\{${1:${VISUAL:}}\}_\{$2\}$0
 endsnippet
 
 context "math()"
@@ -255,34 +280,38 @@ snippet ;tx "text" iA
 endsnippet
 
 context "math()"
-snippet ;bb "bra" iA
-\\bra\{$1\}$0
+snippet ;~ "tilde" iA
+\\tilde\{${1:${VISUAL:}}\}$0
 endsnippet
 
+context "math()"
+snippet ;br "bra" iA
+\\bra\{${1:${VISUAL:}}\}$0
+endsnippet
 
 context "math()"
 snippet ;kk "ket" iA
-\\ket\{$1\}$0
+\\ket\{${1:${VISUAL:}}\}$0
 endsnippet
 
 context "math()"
 snippet ;S "Sigma (summation)" iA
-\\sum_\{$1\}^\{$2\}$0
+\\sum_\{$1\}^\{$2\} ${0:${VISUAL:}}
 endsnippet
 
 context "math()"
 snippet ;P "Pi (product)" iA
-\\prod_\{$1\}^\{$2\}$0
+\\prod_\{$1\}^\{$2\} ${0:${VISUAL:}}
 endsnippet
 
 context "math()"
 snippet ;inf "infinity" iA
-\\infty
+\\infty$0
 endsnippet
 
 context "math()"
 snippet ;hb "hbar" iA
-\\hbar
+\\hbar $0
 endsnippet
 
 #first argument is order, then variable then function
@@ -296,118 +325,119 @@ snippet ;pdv "partial derivative" iA
 \\pdv[$1]\{$2\}\{$3\}$0
 endsnippet
 
+#------------------------------------------------------------------------------
 # Greek letters (math mode only)
 
 context "math()"
 snippet ;aa "alpha" iA
-\\alpha
+\\alpha $0
 endsnippet
 
 context "math()"
 snippet ;bt "beta" iA
-\\beta
+\\beta $0
 endsnippet
 
 context "math()"
 snippet ;gg "gamma" iA
-\\gamma
+\\gamma $0
 endsnippet
 
 context "math()"
 snippet ;G "Gamma" iA
-\\Gamma
+\\Gamma $0
 endsnippet
 
 context "math()"
 snippet ;dd "delta" iA
-\\delta
+\\delta $0
 endsnippet
 
 context "math()"
 snippet ;D "Delta" iA
-\\Delta
+\\Delta $0
 endsnippet
 
 snippet ;ee "epsilon" iA
-\\varepsilon
+\\varepsilon $0
 endsnippet
 
 context "math()"
 snippet ;hh "eta" iA
-\\eta
+\\eta $0
 endsnippet
 
 context "math()"
 snippet ;th "theta" iA
-\\vartheta
+\\vartheta $0
 endsnippet
 
 context "math()"
 snippet ;Th "Theta" iA
-\\Theta
+\\Theta $0
 endsnippet
 
 context "math()"
 snippet ;ll "lambda" iA
-\\lambda
+\\lambda $0
 endsnippet
 
 context "math()"
 snippet ;L "Lambda" iA
-\\Lambda
+\\Lambda $0
 endsnippet
 
 context "math()"
 snippet ;rr "rho" iA
-\\rho
+\\rho $0
 endsnippet
 
 context "math()"
 snippet ;ss "sigma" iA
-\\sigma
+\\sigma $0
 endsnippet
 
 context "math()"
 snippet ;tt "tau" iA
-\\tau
+\\tau $0
 endsnippet
 
 context "math()"
 snippet ;vf "varphi" iA
-\\varphi
+\\varphi $0
 endsnippet
 
 context "math()"
 snippet ;ff "phi" iA
-\\phi
+\\phi $0
 endsnippet
 
 context "math()"
 snippet ;F "Phi" iA
-\\Phi
+\\Phi $0
 endsnippet
 
 context "math()"
 snippet ;ch "chi" iA
-\\chi
+\\chi $0
 endsnippet
 
 context "math()"
 snippet ;ps "psi" iA
-\\psi
+\\psi $0
 endsnippet
 
 context "math()"
 snippet ;Ps "Psi" iA
-\\Psi
+\\Psi $0
 endsnippet
 
 context "math()"
 snippet ;oo "omega" iA
-\\omega
+\\omega $0
 endsnippet
 
 context "math()"
 snippet ;O "Omega" iA
-\\Omega
+\\Omega $0
 endsnippet

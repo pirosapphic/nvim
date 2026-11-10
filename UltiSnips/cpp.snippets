@@ -4,22 +4,22 @@ $0
 endsnippet
 
 snippet ;for "for loop" iA
-for(int $1 = $2; $1 < $3; $1$4){
+for(int ${1:i} = ${2:0}; $1 < $3; $1${4:++}){
 	$0
 }
 endsnippet
 
 snippet ;fn "function" iA
-$1 ($2){
+$1 ($2)\{
 	$0
-}
+\}
 endsnippet
 
 snippet ;main "main function" iA
-int main(){
+int main()\{
 	$0
 	return 0;
-}
+\}
 endsnippet
 
 snippet ;endl "endline" iA
@@ -32,4 +32,8 @@ endsnippet
 
 snippet ;cin "cin" iA
 std::cin >> $0
+endsnippet
+
+snippet ;-- "line" iA
+\\\\-----------------------------------------------------------------------------
 endsnippet
