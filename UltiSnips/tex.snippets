@@ -74,9 +74,9 @@ endsnippet
 
 snippet ;box "makes simple box" iA
 \\noindent\\fbox\{%
-    \\parbox\{\\textwidth\}\{%
+	\\parbox\{\\textwidth\}\{%
 	${1:${VISUAL:}}
-    \}%
+	\}%
 \}
 $0
 endsnippet
@@ -127,7 +127,7 @@ snippet ;mm "inline math visual" iA
 endsnippet
 
 context "math()"
-snippet ;bx "box" iA
+snippet ;bx "boxed" iA
 \\boxed\{${1:${VISUAL:}}\}$0
 endsnippet
 
@@ -144,6 +144,16 @@ endsnippet
 context "math()"
 snippet ;mc "mathcal" iA
 \\mathcal\{${1:${VISUAL:}}\}$0
+endsnippet
+
+context "math()"
+snippet ;ox "tensor product" iA
+\\otimes
+endsnippet
+
+context "math()"
+snippet ;o+ "direct sum" iA
+\\oplus
 endsnippet
 
 context "math()"
